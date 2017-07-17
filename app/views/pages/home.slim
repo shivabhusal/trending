@@ -1,0 +1,100 @@
+header#top.header
+  .text-vertical-center
+    = image_tag 'logo.png', width: '100'
+    h1
+      | Trending
+    h3
+      | Find what's trending
+    br
+    = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
+      i.fa.fa-twitter
+      |  Find Out More, Sign In with Twitter
+section#services.services.bg-primary
+  .container
+    .row.text-center
+      .col-lg-10.col-lg-offset-1
+        h2
+          | Our Services
+        hr.small
+        .row
+          .col-md-4.col-sm-6
+            .service-item
+              span.fa-stack.fa-4x
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-cloud.fa-stack-1x.text-primary
+              h4
+                strong
+                  | Add custom Tags to search
+              p
+                | As an Admin you can add tags to look for
+          .col-md-4.col-sm-6
+            .service-item
+              span.fa-stack.fa-4x
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-compass.fa-stack-1x.text-primary
+              h4
+                strong
+                  | Location based Visualization
+              p
+                | View trending tweets by 
+          .col-md-4.col-sm-6
+            .service-item
+              span.fa-stack.fa-4x
+                i.fa.fa-circle.fa-stack-2x
+                i.fa.fa-flask.fa-stack-1x.text-primary
+              h4
+                strong
+                  | Comprehensible Analytics
+              p
+                | Charts and Graphs will help you get more idea
+aside.callout
+  .text-vertical-center
+    h1
+      | Vertically Centered Text
+aside.call-to-action.bg-primary
+  .container
+    .row
+      .col-lg-12.text-center
+        h3
+          | The buttons below are impossible to resist.
+        = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-light btn-lg' do
+          i.fa.fa-twitter
+          |  Join Us with Twitter
+        = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
+          i.fa.fa-facebook
+          |  Join Us wuth Facebook
+footer
+  .container
+    .row
+      .col-lg-10.col-lg-offset-1.text-center
+        h4
+          strong
+            | Start Bootstrap
+        p
+          | 3481 Melrose Place 
+          br
+          | Beverly Hills, CA 90210
+        ul.list-unstyled
+          li
+            i.fa.fa-phone.fa-fw
+            |  (123) 456-7890
+          li
+            i.fa.fa-envelope-o.fa-fw
+            a[href="mailto:name@example.com"]
+              | name@example.com
+        br
+        ul.list-inline
+          li
+            a[href="#"]
+              i.fa.fa-facebook.fa-fw.fa-3x
+          li
+            a[href="#"]
+              i.fa.fa-twitter.fa-fw.fa-3x
+          li
+            a[href="#"]
+              i.fa.fa-dribbble.fa-fw.fa-3x
+        hr.small
+        p.text-muted
+          | Copyright © Trending #{Date.today.year}
+  a#to-top.btn.btn-dark.btn-lg[href="#top"]
+    i.fa.fa-chevron-up.fa-fw.fa-1x
