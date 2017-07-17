@@ -10,5 +10,5 @@ stub_data = "New York, NY", [
       'country_code' => 'US'
     }
   ]
-Geocoder::Lookup::Test.add_stub(stub_data)
+Geocoder::Lookup::Test.add_stub(*stub_data)
 Geocoder::Lookup::Test.set_default_stub(stub_data)
