@@ -11,6 +11,7 @@
 #  long       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  tag_id     :integer
 #
 
 FactoryGirl.define do

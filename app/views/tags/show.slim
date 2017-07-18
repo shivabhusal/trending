@@ -1,0 +1,26 @@
+.panel.panel-default
+  .panel-heading
+    i.fa.fa-clock-o.fa-fw
+    |  Tweets Timeline for "#{@tag.name}"
+  .panel-body
+    ul.timeline
+      - @tweets.each do |tweet|
+        li
+          .timeline-badge
+            i.fa.fa-twitter
+          .timeline-panel
+            .timeline-heading
+              h4.timeline-title
+                = link_to "https://twitter.com/statuses/#{tweet.payload['id']}", target: '_blank' do
+                  = tweet.payload[:user][:name]
+                  |  (@#{tweet.payload[:user][:screen_name]})
+              p
+                small.text-muted
+                  i.fa.fa-clock-o
+                  ' 
+                  span title="#{tweet.tweeted_at}"
+                    = time_ago_in_words(tweet.tweeted_at)
+                  |  ago via Twitter
+            .timeline-body
+              p
+                = tweet.text

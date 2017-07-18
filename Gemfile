@@ -40,6 +40,7 @@ gem 'devise'
 gem 'slim-rails'
 gem 'geocoder'
 gem 'whenever', :require => false
+gem 'kaminari'
 
 group :development, :test do
   # Adds support for Capybara system testing and selenium driver
