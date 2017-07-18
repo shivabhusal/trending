@@ -11,6 +11,7 @@
 #  long       :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  tag_id     :integer
 #
 
 class Tweet < ApplicationRecord
@@ -20,14 +21,17 @@ class Tweet < ApplicationRecord
   
   after_validation :geocode,         if: ->(obj) { obj.address.present? && obj.address_changed? }
   after_validation :reverse_geocode, if: ->(obj) { obj.lat_changed? || obj.long_changed? }
+  
+  belongs_to :tag
 
   class << self
-    def create_from(tweet)
+    def create_from(tweet, tag = nil)
       new_tweet = new
       new_tweet.text = tweet.text
       new_tweet.payload = tweet.to_hash
       new_tweet.fill_address_from_(tweet)
       new_tweet.tweeted_at = tweet.created_at
+      new_tweet.tag = tag
       new_tweet.save
 
       new_tweet

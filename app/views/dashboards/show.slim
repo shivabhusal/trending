@@ -1,0 +1,20 @@
+h3 Locations
+#accordion.panel-group[role="tablist" aria-multiselectable="true"]
+  - @data.each.with_index do |row, index|
+    .panel.panel-default
+      #headingOne.panel-heading[role="tab"]
+        h4.panel-title
+          a[role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse#{index}" aria-expanded="true" aria-controls="collapseOne"]
+            = row[0]
+      .panel-collapse.collapse.in[role="tabpanel" aria-labelledby="headingOne" id="collapse#{index}"]
+        .panel-body
+          ul.list-group
+            - row[1].each do |tag_data|
+              li.list-group-item
+                span.badge
+                  = tag_data[2]
+                = link_to of_tag_path(tag_data[0], row[0]) do
+                  i.fa.fa-tag 
+                  ' 
+                  = tag_data[1]
+= paginate @data

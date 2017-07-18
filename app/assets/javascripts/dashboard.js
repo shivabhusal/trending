@@ -10,5 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require vendor/jquery/jquery.min.js
 //= require rails-ujs
 //= require turbolinks
+//= require vendor/morrisjs/morris.min.js
+//= require data/morris-data.js
+//= require vendor/bootstrap/js/bootstrap.min.js
+//= require vendor/metisMenu/metisMenu.min.js
+//= require vendor/raphael/raphael.min.js
+//= require dist/js/sb-admin-2.js
