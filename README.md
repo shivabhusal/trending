@@ -22,6 +22,8 @@ MRuby version `2.4+` will be supported.
     - Used whenever gem to write to cron tab; see `schedule.rb` for more info
 
 * Configuration
+  - [See this for configuring twitter for OAuth2](/doc/images/twitter_oauth_localhost.png)
+  - Make sure you use URL `http://127.0.0.1:3000` instead of `http://locahost:3000`
 
 * Database creation
 
