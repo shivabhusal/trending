@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title
+      | Trending
+    = csrf_meta_tags
+    = stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload'
+  body
+    = yield
