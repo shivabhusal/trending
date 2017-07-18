@@ -1,0 +1,33 @@
+@media (min-width: 767px) and ( max-width: 1391px) {
+  .timeline:before{
+    right: 80px;
+    left: inherit;
+  }
+  .timeline > li > .timeline-badge{
+    right: 55px;
+    left: inherit;
+  }
+  .timeline > li > .timeline-panel {
+    float: left;
+    position: relative;
+    width: calc(80%);
+    width: -moz-calc(80%);
+    width: -webkit-calc(80%);
+    padding: 20px;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  }
+}
+@media (max-width: 767px) {
+  ul.timeline:before {
+    left: 40px;
+  }
+  ul.timeline > li > .timeline-panel {
+    width: calc(83%);
+    width: -moz-calc(83%);
+    width: -webkit-calc(83%);
+  }
+}
+
