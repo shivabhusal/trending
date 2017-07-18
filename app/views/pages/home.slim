@@ -6,9 +6,14 @@ header#top.header
     h3
       | Find what's trending
     br
-    = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
-      i.fa.fa-twitter
-      |  Find Out More, Sign In with Twitter
+    - if current_user.present?
+      = link_to dashboard_path, class: 'btn btn-dark btn-lg' do
+        i.fa.fa-dashboard
+        |  Goto Dashboard
+    - else
+      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
+        i.fa.fa-twitter
+        |  Find Out More, Sign In with Twitter
 section#services.services.bg-primary
   .container
     .row.text-center
@@ -50,7 +55,7 @@ section#services.services.bg-primary
 aside.callout
   .text-vertical-center
     h1
-      | Vertically Centered Text
+      | Why don't you join Us? its free
 aside.call-to-action.bg-primary
   .container
     .row
@@ -62,7 +67,7 @@ aside.call-to-action.bg-primary
           |  Join Us with Twitter
         = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
           i.fa.fa-facebook
-          |  Join Us wuth Facebook
+          |  Join Us with Facebook
 footer
   .container
     .row
