@@ -39,6 +39,8 @@ gem 'omniauth-twitter'
 gem 'devise'
 gem 'slim-rails'
 gem 'geocoder'
+gem 'whenever', :require => false
+
 group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'

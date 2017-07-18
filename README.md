@@ -18,6 +18,8 @@ tweets mentioning the `tag`.
 MRuby version `2.4+` will be supported.
 
 * System dependencies
+  - Cron
+    - Used whenever gem to write to cron tab; see `schedule.rb` for more info
 
 * Configuration
 
