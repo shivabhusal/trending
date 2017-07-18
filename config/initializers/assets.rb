@@ -12,4 +12,7 @@ Rails.application.config.assets.paths << Rails.root.join('vendor/startbootstrap-
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( static.js static.css )
+Rails.application.config.assets.precompile += %w[dashboard.js
+                                                 dashboard.css
+                                                 static.js
+                                                 static.css]
