@@ -14,7 +14,6 @@
 //= require rails-ujs
 //= require turbolinks
 //= require vendor/morrisjs/morris.min.js
-//= require data/morris-data.js
 //= require vendor/bootstrap/js/bootstrap.min.js
 //= require vendor/metisMenu/metisMenu.min.js
 //= require vendor/raphael/raphael.min.js
