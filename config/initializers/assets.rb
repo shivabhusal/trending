@@ -9,8 +9,6 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.paths << Rails.root.join('vendor/startbootstrap-stylish-portfolio-gh-pages')
 Rails.application.config.assets.paths << Rails.root.join('vendor/sb-admin-2')
-Rails.application.config.assets.paths << Rails.root.join('vendor/assets/fonts')
-Rails.application.config.assets.paths << Rails.root.join('vendor/assets/images')
 
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
