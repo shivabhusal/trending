@@ -1,0 +1,14 @@
+# This is a sample config file.
+# Copy this file as `config/application.yml` and update with your creds
+
+development:
+  TWITTER_API:                  XHvE6GaJHaBQqXXXkZnerWtt3
+  TWITTER_API_SECRET:           LycedsEwxe2fr5x1XXXdmNduSC9GX8m1NamoXFwONbHfdHZe4M
+  TWITTER_ACCESS_TOKEN:         128795105-eZwkOCmXXXX91Rp453faclTLBOYiLeP17XFnw610
+  TWITTER_ACCESS_TOKEN_SECRET:  HZvTNn637aF2YTgCZdXXXX6FhzwQ3FToxtG4rgylVMDIz
+
+production:
+  TWITTER_API:                  r0npLzJBZzxMLV8TYXXX7rN0O
+  TWITTER_API_SECRET:           2Boc2bVnISlMWKBnRiMsLb673f4dTBNMIVTnN2u2tf9yDjK02E
+  TWITTER_ACCESS_TOKEN:         128795105-tworZZOu52XXXXXrPQwHr623wvQPu669k4A7z160
+  TWITTER_ACCESS_TOKEN_SECRET:  5uIXoYpWeYIu02e0hhcKXXXP0LUcvtsOinFU4BVK6acEI
