@@ -9,15 +9,15 @@ namespace :trending do
   desc 'fetch tweets containing #hashtags every 12 hrs'
   task fetch: :environment do
     log_file = ENV['log'] == 'stdout' ? STDOUT : Rails.root.join('log/cron.log')
-
+    since = ENV['days'] ? ENV['days'].to_i.days.ago.to_date : (Date.today - 1.day)
     logger = Logger.new(log_file)
 
     tags = Tag.all
     tags.each do |tag|
       logger.info "Fetching tweets for #{tag.name}"
-
-      tweets = TwitterClient.search("##{tag.name} since:#{Date.today - 1.day}")
-
+      query = "##{tag.name} since:#{since}"
+      tweets = TwitterClient.search(query)
+      logger.info "Query: '#{query}'"
       logger.info "Tweets count for #{tag.name}: #{tweets.count}"
       log = ''
 
