@@ -1,0 +1,14 @@
+- if flash[:notice].present?
+  .the-flash.alert.alert-success.main_alert[role="alert"]
+    a.close href="#" data-dismiss="alert" aria-label="close" &times;
+    = flash[:notice]
+- elsif flash[:error].present?
+  .the-flash.alert.alert-danger.main_alert[role="alert"]
+    a.close href="#" data-dismiss="alert" aria-label="close" &times;
+    = flash[:error]
+
+/ Alert might coexists with other flash types
+- if flash[:alert].present?
+  .the-flash.alert.alert-warning.main_alert[role="alert"]
+    a.close href="#" data-dismiss="alert" aria-label="close" &times;
+    = flash[:alert]
