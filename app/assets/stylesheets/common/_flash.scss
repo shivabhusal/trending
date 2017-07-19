@@ -1,0 +1,13 @@
+.the-flash {
+  position: fixed;
+  top: 10px;
+  left: 0px;
+  z-index: 1501;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+
+  .close {
+      margin-left: 20px;
+  }
+}
