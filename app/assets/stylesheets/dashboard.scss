@@ -1,6 +1,11 @@
+/*
+*= require_self
+*= require 'common'
+*= require 'dashboard_layout'
+*/
+
 @import "vendor/bootstrap/css/bootstrap.min.css";
 @import "vendor/metisMenu/metisMenu.min.css";
 @import "dist/css/sb-admin-2.css";
 @import "vendor/morrisjs/morris.css";
 @import "vendor/font-awesome/css/font-awesome.min.css";
-@import "overrides"
