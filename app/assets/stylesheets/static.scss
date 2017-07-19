@@ -1,7 +1,9 @@
 /*
-
-//= require 'css/stylish-portfolio'
-//= require 'font-awesome/css/font-awesome.min.css'
+*= require_self
+*= require 'css/stylish-portfolio'
+*= require 'font-awesome/css/font-awesome.min.css'
+*= require 'common'
+*= require 'static_layout'
 */
 
 @import "bootstrap";
