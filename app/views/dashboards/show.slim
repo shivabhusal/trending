@@ -1,3 +1,10 @@
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        |  Trends of Tweets per tag
+      .panel-body
+        #morris-area-chart
 h3 Locations
 #accordion.panel-group[role="tablist" aria-multiselectable="true"]
   - @data.each.with_index do |row, index|
@@ -18,3 +25,17 @@ h3 Locations
                   ' 
                   = tag_data[1]
 = paginate @data
+
+javascript:
+    Morris.Area({
+        element: 'morris-area-chart',
+        data: [
+          #{chart_data.html_safe}
+        ],
+        xkey: 'date',
+        ykeys: #{tags_data.values.inspect.html_safe},
+        labels: #{tags_data.values.inspect.html_safe},
+        pointSize: 2,
+        hideHover: 'auto',
+        resize: true
+    });
