@@ -4,7 +4,7 @@ class TagsController < ApplicationController
 
   def show
     @tag = Tag.find(params[:id])
-    @tweets = @tag.tweets.where(address: params[:address]).order(tweeted_at: :desc)
+    @tweets = @tag.tweets.from_(params[:address])
     @tweets_count = @tweets.count
   end
 end

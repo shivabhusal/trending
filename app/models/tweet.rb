@@ -17,11 +17,12 @@
 class Tweet < ApplicationRecord
   store :metadata, accessors: %i[user payload]
   reverse_geocoded_by :lat, :long
-  geocoded_by         :address, :latitude  => :lat, :longitude => :long
-  
+  geocoded_by         :address, latitude: :lat, longitude: :long
+
   after_validation :geocode,         if: ->(obj) { obj.address.present? && obj.address_changed? }
   after_validation :reverse_geocode, if: ->(obj) { obj.lat_changed? || obj.long_changed? }
-  
+
+  scope :from_, ->(address) { where(address: address).order(tweeted_at: :desc) }
   belongs_to :tag
 
   class << self
