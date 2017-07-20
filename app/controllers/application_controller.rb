@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  layout 'devise', if: :devise_controller?
 
   private
     def after_sign_in_path_for(resource)

@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title
+      | Trending
+    = csrf_meta_tags
+    = stylesheet_link_tag    'static', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'static', 'data-turbolinks-track': 'reload'
+  body
+    header#top.header
+      .text-vertical-center
+        = image_tag 'logo.png', width: '100'
+        h1
+          | Trending
+        h3
+          | Find what's trending
+        br
+        hr
+        .parent
+          .align-left.display-table.margin-auto.text-left
+            = yield
