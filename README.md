@@ -11,8 +11,13 @@
 
 A Ruby on Rails based web app to find tweets on topics you choose. If setup properly, Trending will fetch tweets mentioning hash-tags set in database-table 'tags' once a day. Will display the trends in Trend-Chart in the dashbaord. Any user Authenticated via Twitter/Facebook will be able to see/browse the trends per Author-Location.
 
+## Dashboard 
+
 ![](/doc/images/trend_graph.png)
 
+## Timeline
+
+![](/doc/images/tweets_snip.png)
 
 It will periodically fetch tweets from Twitter about those topics and categorizes them according to the location 
 of the respective authors.
