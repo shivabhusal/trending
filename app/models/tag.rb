@@ -10,4 +10,5 @@
 
 class Tag < ApplicationRecord
   has_many :tweets
+  validates_uniqueness_of :name
 end
