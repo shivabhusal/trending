@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+ - 2.4
+script:
+  - RAILS_ENV=test bundle exec rake db:create --trace
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec
