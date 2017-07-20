@@ -1,5 +1,6 @@
 .header {
   background: image-url('bg.jpg') no-repeat center center scroll;
+  background-size: cover;
 }
 
 @font-face {
@@ -12,4 +13,5 @@
 
 .callout {
   background: image-url('callout.jpg') no-repeat center center scroll;
+  background-size: cover;
 }

@@ -6,14 +6,27 @@ header#top.header
     h3
       | Find what's trending
     br
+    - if current_admin_user.present?
+      = link_to dashboard_path, class: 'btn btn-dark btn-lg margin10all' do
+        i.fa.fa-dashboard
+        |  Goto Admin Panel
     - if current_user.present?
-      = link_to dashboard_path, class: 'btn btn-dark btn-lg' do
+      = link_to dashboard_path, class: 'btn btn-dark btn-lg margin10all' do
         i.fa.fa-dashboard
         |  Goto Dashboard
     - else
-      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
+      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg margin10all bg-twitter-color' do
         i.fa.fa-twitter
         |  Find Out More, Sign In with Twitter
+      
+      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg margin10all bg-facebook-color' do
+        i.fa.fa-facebook
+        |  Find Out More, Sign In with Facebook
+      br
+      = link_to new_admin_user_session_path, class: 'btn btn-dark btn-lg margin10all' do
+        i.fa.fa-user
+        |  Sign In As Admin
+
 section#services.services.bg-primary
   .container
     .row.text-center
@@ -52,22 +65,23 @@ section#services.services.bg-primary
                   | Comprehensible Analytics
               p
                 | Charts and Graphs will help you get more idea
-aside.callout
-  .text-vertical-center
-    h1
-      | Why don't you join Us? its free
-aside.call-to-action.bg-primary
-  .container
-    .row
-      .col-lg-12.text-center
-        h3
-          | The buttons below are impossible to resist.
-        = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-light btn-lg' do
-          i.fa.fa-twitter
-          |  Join Us with Twitter
-        = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg' do
-          i.fa.fa-facebook
-          |  Join Us with Facebook
+- unless current_user.present? || current_admin_user.present?
+  aside.callout
+    .text-vertical-center
+      h1
+        | Why don't you join Us? its free
+  aside.call-to-action.bg-primary
+    .container
+      .row
+        .col-lg-12.text-center
+          h3
+            | The buttons below are impossible to resist.
+          = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-light btn-lg bg-twitter-color' do
+            i.fa.fa-twitter
+            |  Join Us with Twitter
+          = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg bg-facebook-color' do
+            i.fa.fa-facebook
+            |  Join Us with Facebook
 footer
   .container
     .row
