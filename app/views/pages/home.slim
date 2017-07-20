@@ -10,22 +10,26 @@ header#top.header
       = link_to admin_root_path, class: 'btn btn-dark btn-lg margin10all' do
         i.fa.fa-dashboard
         |  Goto Admin Panel
-    - if current_user.present?
-      = link_to dashboard_path, class: 'btn btn-dark btn-lg margin10all' do
-        i.fa.fa-dashboard
-        |  Goto Dashboard
-    - else
-      = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg margin10all bg-twitter-color' do
-        i.fa.fa-twitter
-        |  Find Out More, Sign In with Twitter
-      
-      = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-dark btn-lg margin10all bg-facebook-color' do
-        i.fa.fa-facebook
-        |  Find Out More, Sign In with Facebook
-      br
-      = link_to new_admin_user_session_path, class: 'btn btn-dark btn-lg margin10all' do
-        i.fa.fa-user
-        |  Sign In As Admin
+    - else 
+
+      - if current_user.present?
+        = link_to dashboard_path, class: 'btn btn-dark btn-lg margin10all' do
+          i.fa.fa-dashboard
+          |  Goto Dashboard
+      - else
+        = link_to user_twitter_omniauth_authorize_path, class: 'btn btn-dark btn-lg margin10all bg-twitter-color' do
+          i.fa.fa-twitter
+          |  Find Out More, Sign In with Twitter
+        
+        = link_to user_facebook_omniauth_authorize_path, class: 'btn btn-dark btn-lg margin10all bg-facebook-color' do
+          i.fa.fa-facebook
+          |  Find Out More, Sign In with Facebook
+        
+        br
+
+        = link_to new_admin_user_session_path, class: 'btn btn-dark btn-lg margin10all' do
+          i.fa.fa-user
+          |  Sign In As Admin
 
 section#services.services.bg-primary
   .container
