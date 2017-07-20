@@ -1,5 +1,8 @@
 <img src="http://laura.productions/wp-content/uploads/2015/06/09352fdbe35a23ea367800dbbb95df421.png" width="150">
 
+[![Code Climate](https://codeclimate.com/github/shivabhusal/trending/badges/gpa.svg)](https://codeclimate.com/github/shivabhusal/trending)
+[![Issue Count](https://codeclimate.com/github/shivabhusal/trending/badges/issue_count.svg)](https://codeclimate.com/github/shivabhusal/trending)
+
 # Trending  
 
 A Ruby on Rails based web app to find tweets on topics you choose. Admins will have a text-box in admin 
