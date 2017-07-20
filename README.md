@@ -65,3 +65,11 @@ MRuby version `2.4+` will be supported.
 ```ruby
   $ rspec spec/
 ```
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/shivabhusal/trending. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
+
+## License
+
+The Rails App is available as open source under the terms of the MIT License.
