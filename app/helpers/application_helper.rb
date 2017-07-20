@@ -26,6 +26,8 @@ module ApplicationHelper
   def map_url
     address = params[:address].gsub(/[Uu]nnamed\s[Rr]oad,\s/, '')
     zoom_level = address == params[:address] ? 17 : 13
-    "https://maps.googleapis.com/maps/api/staticmap?center=#{URI.encode(address)}&zoom=#{zoom_level}&size=1200x400&markers=color:blue"
+    "https://maps.googleapis.com/maps/api/staticmap?"\
+    "center=#{URI.encode(address)}&zoom=#{zoom_level}&size=1200x400&markers=color:blue"\
+    "&key=#{ENV['GMAP_API']}"
   end
 end

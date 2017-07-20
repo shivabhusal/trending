@@ -7,7 +7,7 @@ header#top.header
       | Find what's trending
     br
     - if current_admin_user.present?
-      = link_to dashboard_path, class: 'btn btn-dark btn-lg margin10all' do
+      = link_to admin_root_path, class: 'btn btn-dark btn-lg margin10all' do
         i.fa.fa-dashboard
         |  Goto Admin Panel
     - if current_user.present?

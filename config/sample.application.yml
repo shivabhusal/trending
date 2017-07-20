@@ -10,6 +10,7 @@ development:
   FB_API:                       30705986309XX
   FB_API_SECRET:                fe82a95408ea026f69a94876ce12acXX
 
+  GMAP_API:                     AIzaSyCDPBXX9AGj-JPaIGoYEg-KDnqazfJ5OXX
 production:
   TWITTER_API:                  r0npLzJBZzxMLV8TYXXX7rN0O
   TWITTER_API_SECRET:           2Boc2bVnISlMWKBnRiMsLb673f4dTBNMIVTnN2u2tf9yDjK02E
@@ -18,3 +19,5 @@ production:
 
   FB_API:                       3070598630929XX
   FB_API_SECRET:                fe82a95408ea026f69a94876ce12acXX
+
+  GMAP_API:                     AIzaSyCDPBXX9AGj-JPaIGXYEg-KDnqazfJ5OXX
