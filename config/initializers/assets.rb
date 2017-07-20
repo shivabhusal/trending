@@ -17,5 +17,3 @@ Rails.application.config.assets.precompile += %w[dashboard.js
                                                  dashboard.css
                                                  static.js
                                                  static.css]
-
-Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/

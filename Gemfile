@@ -43,13 +43,15 @@ gem 'geocoder'
 gem 'whenever', :require => false
 gem 'kaminari'
 
+gem 'activeadmin'
+
 group :development, :test do
+gem 'figaro'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'zeus', require: false
   gem 'pry'
-  gem 'figaro'
   gem 'rspec-rails'
 end
 
