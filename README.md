@@ -9,8 +9,10 @@
 
 # Trending  
 
-A Ruby on Rails based web app to find tweets on topics you choose. Admins will have a text-box in admin 
-panel where they can put comma separated values of terms/tags to be searched.
+A Ruby on Rails based web app to find tweets on topics you choose. If setup properly, Trending will fetch tweets mentioning hash-tags set in database-table 'tags' once a day. Will display the trends in Trend-Chart in the dashbaord. Any user Authenticated via Twitter/Facebook will be able to see/browse the trends per Author-Location.
+
+![](/doc/images/trend_graph.png)
+
 
 It will periodically fetch tweets from Twitter about those topics and categorizes them according to the location 
 of the respective authors.
@@ -19,6 +21,8 @@ Default tags would be
 - `#Nepal`
 - `#Kathmandu`
 
+Admin will be able to add tags.
+
 ## Things one can learn from this project
   - OAuth2 authentication using Devise,Twitter
   - Search through Tweets using Twitter API
@@ -26,15 +30,16 @@ Default tags would be
     - [See this for more info](https://cbabhusal.wordpress.com/2017/07/19/rails-using-bootstrap-templates-in-vendor/)
 
 ## Authentication
-Will will get Authenticated using OAuth2 to Twitter. An Authenticated user will be able to click on the tags, 
-which will show you the timeline of tweets.
+Users will get authenticated using OAuth2 to Twitter and Facebook. An Authenticated user will be able to click on the tags categorized by author-location, which will show them the timeline of tweets along with the map of the region (if its a valid location).
 
 ## Admin
 Admin will be able to manipulate data from the control panel. We are using active-admin for that purpose. 
-**How To Access**  
-- goto URL [http://localhost:3000/admin](http://localhost:3000/admin)
-**In Production**  
-- goto URL [https://trending-today.herokuapp.com/admin](https://trending-today.herokuapp.com/admin)
+
+### How To Access
+- **Development**
+  - goto URL [http://localhost:3000/admin](http://localhost:3000/admin)  
+- **In Production**  
+  - goto URL [https://trending-today.herokuapp.com/admin](https://trending-today.herokuapp.com/admin)
 
 ## Ruby version
 MRuby version `2.4+` will be supported.
