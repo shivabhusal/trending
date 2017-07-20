@@ -11,5 +11,4 @@ Rails.application.routes.draw do
       get '/:address', action: 'show', as: :of
     end
   end
-
 end

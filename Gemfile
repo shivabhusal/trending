@@ -37,6 +37,7 @@ gem 'twitter'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem 'devise'
 gem 'slim-rails'
 gem 'geocoder'
