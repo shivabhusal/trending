@@ -1,4 +1,7 @@
-# Trending
+<img src="http://laura.productions/wp-content/uploads/2015/06/09352fdbe35a23ea367800dbbb95df421.png" width="150">
+
+# Trending  
+
 A Ruby on Rails based web app to find tweets on topics you choose. Admins will have a text-box in admin 
 panel where they can put comma separated values of terms/tags to be searched.
 
@@ -24,7 +27,7 @@ Admin will be able to manipulate data from the control panel. We are using activ
 **How To Access**  
 - goto URL [http://localhost:3000/admin](http://localhost:3000/admin)
 **In Production**  
-- goto URL [http://localhost:3000/admin](http://localhost:3000/admin)
+- goto URL [https://trending-today.herokuapp.com/admin](https://trending-today.herokuapp.com/admin)
 
 ## Ruby version
 MRuby version `2.4+` will be supported.
